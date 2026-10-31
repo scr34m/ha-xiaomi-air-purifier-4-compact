@@ -27,7 +27,7 @@ Not exposed on purpose: 9.10 country-code (changing the region can lock the devi
 
 ## Installation
 
-1. Copy `custom_components/xiaomi_air_purifier_4_compact` into `config/custom_components/` of Home Assistant, then restart.
+1. HACS → Custom repositories → `https://github.com/scr34m/ha-xiaomi-air-purifier-4-compact`, category **Integration**, then download it and restart. Or manually: copy `custom_components/xiaomi_air_purifier_4_compact` into `config/custom_components/` of Home Assistant, then restart.
 2. Settings → Devices & services → Add integration → **Xiaomi Smart Air Purifier 4 Compact**.
 3. Enter the IP address and the 32-character token (from the Xiaomi Cloud Tokens Extractor). Add each purifier separately.
 

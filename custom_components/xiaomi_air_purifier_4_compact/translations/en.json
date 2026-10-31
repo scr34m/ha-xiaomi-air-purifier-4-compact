@@ -1,0 +1,81 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to Xiaomi Smart Air Purifier 4 Compact",
+        "description": "Enter the IP address and 32-character local device token for your Xiaomi Air Purifier 4 Compact.",
+        "data": {
+          "host": "IP Address",
+          "token": "Device Token (32 hex characters)",
+          "name": "Device Name"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect to the air purifier. Please check the IP address and token.",
+      "invalid_token": "The token must be 32 hexadecimal characters.",
+      "unsupported_model": "This device is not a Xiaomi Smart Air Purifier 4 Compact (xiaomi.airp.cpa4).",
+      "unknown": "An unexpected error occurred."
+    },
+    "abort": {
+      "already_configured": "This device is already configured in Home Assistant."
+    }
+  },
+  "entity": {
+    "fan": {
+      "air_purifier": {
+        "state_attributes": {
+          "preset_mode": {
+            "state": {
+              "auto": "Auto",
+              "sleep": "Sleep",
+              "favorite": "Favorite"
+            }
+          }
+        }
+      }
+    },
+    "sensor": {
+      "filter_life": { "name": "Filter life" },
+      "filter_left_time": { "name": "Filter time left" },
+      "filter_used_time": { "name": "Filter used time" },
+      "motor_speed": { "name": "Motor speed" },
+      "fault": {
+        "name": "Fault",
+        "state": {
+          "no_fault": "No fault",
+          "motor_stuck": "Motor stuck",
+          "sensor_lost": "Sensor lost"
+        }
+      }
+    },
+    "switch": {
+      "child_lock": { "name": "Child lock" },
+      "alarm": { "name": "Button beep" }
+    },
+    "number": {
+      "favorite_level": { "name": "Favorite level" }
+    },
+    "select": {
+      "mode": {
+        "name": "Mode",
+        "state": {
+          "auto": "Auto",
+          "sleep": "Sleep",
+          "favorite": "Favorite"
+        }
+      },
+      "brightness": {
+        "name": "Screen brightness",
+        "state": {
+          "off": "Off",
+          "dim": "Dim",
+          "bright": "Bright"
+        }
+      }
+    },
+    "button": {
+      "reset_filter": { "name": "Reset filter" }
+    }
+  }
+}

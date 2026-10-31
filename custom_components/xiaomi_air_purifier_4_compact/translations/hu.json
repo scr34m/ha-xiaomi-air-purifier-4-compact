@@ -1,0 +1,81 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Xiaomi Smart Air Purifier 4 Compact csatlakoztatása",
+        "description": "Add meg a légtisztító IP-címét és 32 karakteres helyi tokenjét.",
+        "data": {
+          "host": "IP-cím",
+          "token": "Eszköztoken (32 hexadecimális karakter)",
+          "name": "Eszköz neve"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Nem sikerült csatlakozni a légtisztítóhoz. Ellenőrizd az IP-címet és a tokent.",
+      "invalid_token": "A tokennek 32 hexadecimális karakterből kell állnia.",
+      "unsupported_model": "Ez az eszköz nem Xiaomi Smart Air Purifier 4 Compact (xiaomi.airp.cpa4).",
+      "unknown": "Váratlan hiba történt."
+    },
+    "abort": {
+      "already_configured": "Ez az eszköz már be van állítva a Home Assistantban."
+    }
+  },
+  "entity": {
+    "fan": {
+      "air_purifier": {
+        "state_attributes": {
+          "preset_mode": {
+            "state": {
+              "auto": "Automatikus",
+              "sleep": "Alvó",
+              "favorite": "Kedvenc"
+            }
+          }
+        }
+      }
+    },
+    "sensor": {
+      "filter_life": { "name": "Szűrő élettartam" },
+      "filter_left_time": { "name": "Szűrő hátralévő ideje" },
+      "filter_used_time": { "name": "Szűrő használati ideje" },
+      "motor_speed": { "name": "Motor fordulatszám" },
+      "fault": {
+        "name": "Hiba",
+        "state": {
+          "no_fault": "Nincs hiba",
+          "motor_stuck": "Motor elakadt",
+          "sensor_lost": "Szenzor nem elérhető"
+        }
+      }
+    },
+    "switch": {
+      "child_lock": { "name": "Gyerekzár" },
+      "alarm": { "name": "Gombhang" }
+    },
+    "number": {
+      "favorite_level": { "name": "Kedvenc fokozat" }
+    },
+    "select": {
+      "mode": {
+        "name": "Üzemmód",
+        "state": {
+          "auto": "Automatikus",
+          "sleep": "Alvó",
+          "favorite": "Kedvenc"
+        }
+      },
+      "brightness": {
+        "name": "Kijelző fényerő",
+        "state": {
+          "off": "Ki",
+          "dim": "Halvány",
+          "bright": "Fényes"
+        }
+      }
+    },
+    "button": {
+      "reset_filter": { "name": "Szűrő nullázása" }
+    }
+  }
+}

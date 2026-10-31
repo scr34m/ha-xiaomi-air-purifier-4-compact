@@ -1,0 +1,20 @@
+[project]
+name = "ha-xiaomi-air-purifier-4-compact"
+version = "1.0.0"
+description = "Home Assistant custom integration for Xiaomi Smart Air Purifier 4 Compact (local MIoT)"
+readme = "README.md"
+license = { text = "GPL-3.0-or-later" }
+requires-python = ">=3.14"
+dependencies = [
+    "python-miio>=0.5.12",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest-homeassistant-custom-component",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+pythonpath = ["."]
+testpaths = ["tests"]
